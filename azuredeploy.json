@@ -415,6 +415,14 @@
     "playerUrl": {
       "type": "string",
       "value": "[concat('http://',variables('webAppName'),'.azurewebsites.net/WebApp/WebApp.html')]"
+    },
+    "curlCmd1": {
+      "type": "string",
+      "value": "[concat('curl -d \\\"{test: \\'hello\\' }\\\" -H \\\"Content-Type: application/json\\\"  -X POST   https://',variables('azFunctionName'),'.azurewebsites.net//api/Function1App')]"
+    },
+    "curlCmd2": {
+      "type": "string",
+      "value": "[concat('curl -d \\\"{test: \\'hello\\' }\\\" -H \\\"Content-Type: application/json\\\"  -X POST   https://',variables('azFunctionName'),'.azurewebsites.net//api/Function2App')]"
     }
   }
 }
