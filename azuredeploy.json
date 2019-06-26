@@ -204,7 +204,7 @@
       "type": "Microsoft.Web/sites",
       "apiVersion": "2016-08-01",
       "name": "[variables('azFunctionName')]",
-      "location": "North Europe",
+      "location": "[resourceGroup().location]",
       "dependsOn": [
         "[resourceId('Microsoft.Web/serverfarms', variables('azFunctionPlanName'))]"
       ],
