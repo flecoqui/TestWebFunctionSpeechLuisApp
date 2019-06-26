@@ -232,7 +232,23 @@
         "containerSize": 1536,
         "dailyMemoryTimeQuota": 0,
         "httpsOnly": false
-      }
+      },
+      "resources": [
+        {
+          "apiVersion": "2016-08-01",
+          "name": "web",
+          "type": "sourcecontrols",
+          "dependsOn": [
+            "[resourceId('Microsoft.Web/Sites', variables('azFunctionName'))]"
+          ],
+          "properties": {
+            "RepoUrl": "[parameters('repoURL')]",
+            "branch": "[parameters('branch')]",
+            "IsManualIntegration": true
+          }
+        }
+      ]
+
     },
     {
       "type": "Microsoft.Web/serverfarms",
