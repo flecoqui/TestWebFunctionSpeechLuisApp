@@ -398,7 +398,7 @@
     },
     "playerUrl": {
       "type": "string",
-      "value": "[concat('http://',variables('webAppName'),'.azurewebsites.net/WebApp.html')]"
+      "value": "[concat('http://',variables('webAppName'),'.azurewebsites.net/WebApp/WebApp.html')]"
     }
   }
 }
