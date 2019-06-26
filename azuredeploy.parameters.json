@@ -1,0 +1,33 @@
+{
+  "$schema": "http://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+  "contentVersion": "1.0.0.0",
+  "parameters": {
+    "namePrefix": {
+      "value": "testspeech"
+    },
+    "storageSku": {
+      "value": "Standard_LRS"
+    },
+    "searchSku": {
+      "value": "basic"
+    },
+    "customSpeechSku": {
+      "value": "S0"
+    },
+    "luisSku": {
+      "value": "S0"
+    },
+    "azFunctionAppSku": {
+      "value": "F1"
+    },
+    "webAppSku": {
+      "value": "F1"
+    },
+    "repoURL": {
+      "value": "https://github.com/flecoqui/TestWebFunctionSpeechLuisApp.git"
+    },
+    "branch": {
+      "value": "master"
+    }
+  }
+}
