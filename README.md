@@ -1,4 +1,4 @@
-# Deployment of a service based on Azure App Service, Azure Function, Speech and LUIS Services
+# Deployment of a service based on Azure App Service, Azure Function, Azure Search, Azure Storage, Speech and LUIS Services
 
 <a href="https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2Fflecoqui%2FTestWebFunctionSpeechLuisApp%2Fmaster%2Fazuredeploy.json" target="_blank">
     <img src="http://azuredeploy.net/deploybutton.png"/>
@@ -7,7 +7,7 @@
     <img src="http://armviz.io/visualizebutton.png"/>
 </a>
 
-This template allows you to deploy a Web Application on Azure App Service, several functions on Azure Function, a Speech Service and a LUIS service. Moreover, the applications and functions source code  will be stored on github and automatically deployed on Azure.
+This template allows you to deploy a Web Application on Azure App Service, several functions on Azure Function, an Azure Storage Account, Azure Search Account, a Speech Service and a LUIS service. Moreover, the applications and functions source code  will be stored on github and automatically deployed on Azure.
 
 
 ![](https://raw.githubusercontent.com/flecoqui/TestWebFunctionSpeechLuisApp/master/Docs/1-architecture.png)
