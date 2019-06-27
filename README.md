@@ -40,27 +40,34 @@ For instance:
 
 
 When you deploy the service you can define the following parameters:</p>
-**webSiteName:**                    The name of the web site (must be unique) </p>
-**hostingPlanName:**                The name of the hosting Plan (must be unique)</p>
-**skuName:**                        The Sku Name, by default "S1". Use S1 to get the connection between the App Service and the VNET</p>
-**skuCapacity:**                    The Sku Capacity, by defualt 1</p>
-**sqlServerName:**                  The SQL Server Name (must be unique)</p>
-**databaseName:**                   The database Name (must be unique)</p>
-**sqlAdministratorLogin:**          The SQL Administrator Login</p>
-**sqlAdministratorLoginPassword:**  The SQL Administrator Password (Complexe password required)</p>
-**nsgName:**                        The Network Security Group Name</p>
-**virtualNetworkName:**             The Virtual Network Name</p>
-**subnetName:**                     The Subnet Name</p>
-**storageAccountName:**             The Stoarage Account Name</p>
+**namePrefix:**						The name prefix which will be used for all the services deployed with this ARM Template</p>
+**storageSku:**                     The Storage Sku Capacity, by default Standard_LRS</p>
+**searchSku:**						The Search Sku Capacity, by default free</p>
+**customSpeechSku:**                The Custom Speech Sku Capacity, by default F0</p>
+**luisSku:**						The LUIS Sku Capacity, by default F0</p>
+**WebAppSku:**						The WebApp Sku Capacity, by defualt F1</p>
+**azFunctionAppSku:**				The Azure Function App Sku Capacity, by defualt F1</p>
 **repoURL:**                        The github repository url</p>
 **branch:**                         The branch name in the repository</p>
+
+Once deployed, the following services are available in the resource group:
+
+
+![](https://raw.githubusercontent.com/flecoqui/TestWebFunctionSpeechLuisApp/master/Docs/1-deploy.png)
+
 
 ## TEST THE SERVICES:
 Once the services are deployed, you can open the Web page hosted on the Azure App Service.
 For instance :
 
-     http://<websitename>.azurewebsites.net/
+     http://<websitename>.azurewebsites.net//WebApp/WebApp.html
  
+With Curl you can test the Azure Functions:
+For instance :
+
+     curl -d "{}" -H "Content-Type: application/json"  -X POST   https://testspeechfunction.azurewebsites.net/api/Function1App
+     curl -d "{}" -H "Content-Type: application/json"  -X POST   https://testspeechfunction.azurewebsites.net/api/Function2App
+
 </p>
 
 

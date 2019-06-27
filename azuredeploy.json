@@ -39,7 +39,7 @@
     },
     "customSpeechSku": {
       "type": "string",
-      "defaultValue": "Free",
+      "defaultValue": "F0",
       "allowedValues": [
         "F0",
         "S0"
@@ -50,7 +50,7 @@
     },
     "luisSku": {
       "type": "string",
-      "defaultValue": "Free",
+      "defaultValue": "F0",
       "allowedValues": [
         "F0",
         "S0"
@@ -418,11 +418,11 @@
     },
     "curlCmd1": {
       "type": "string",
-      "value": "[concat('curl -d \\\"{test: \\'hello\\' }\\\" -H \\\"Content-Type: application/json\\\"  -X POST   https://',variables('azFunctionName'),'.azurewebsites.net//api/Function1App')]"
+      "value": "[concat('curl -d \"{}\" -H \"Content-Type: application/json\"  -X POST   https://',variables('azFunctionName'),'.azurewebsites.net/api/Function1App')]"
     },
     "curlCmd2": {
       "type": "string",
-      "value": "[concat('curl -d \\\"{test: \\'hello\\' }\\\" -H \\\"Content-Type: application/json\\\"  -X POST   https://',variables('azFunctionName'),'.azurewebsites.net//api/Function2App')]"
+      "value": "[concat('curl -d \"{}\" -H \"Content-Type: application/json\"  -X POST   https://',variables('azFunctionName'),'.azurewebsites.net/api/Function2App')]"
     }
   }
 }
