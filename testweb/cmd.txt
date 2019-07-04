@@ -1,0 +1,19 @@
+curl -d "{}" -H "Content-Type: application/json"  -X POST   https://testspeechfunction.azurewebsites.net/api/Function2App
+curl -d "{}" -H "Content-Type: application/json"  -X GET   http://localhost:5000/api/values
+
+curl -d "{}" -H "Content-Type: application/json"  -X POST   http://localhost:5000/api/values
+
+dotnet publish C:\temp\testweb --self-contained -c Release -r win-x64
+
+set ASPNETCORE_ENVIRONMENT=Production
+set ASPNETCORE_preventHostingStartup=true
+AMSReverseProxy.exe  --environment "Production"
+
+
+
+
+set ASPNETCORE_ENVIRONMENT=Development
+set ASPNETCORE_preventHostingStartup=true
+AMSReverseProxy.exe  --environment "Development"
+
+
