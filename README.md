@@ -1,16 +1,16 @@
 # Deployment of a service based on Azure App Service, Azure Function, Azure Search, Azure Storage, Speech and LUIS Services
 
-<a href="https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2Fflecoqui%2FTestWebFunctionSpeechLuisApp%2Fmaster%2Fazuredeploy.json" target="_blank">
+<a href="https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2Fflecoqui%2FTestRESTAPIService%2Fmaster%2Fazuredeploy.json" target="_blank">
     <img src="http://azuredeploy.net/deploybutton.png"/>
 </a>
-<a href="http://armviz.io/#/?load=https%3A%2F%2Fraw.githubusercontent.com%2Fflecoqui%2FTestWebFunctionSpeechLuisApp%2Fmaster%2Fazuredeploy.json" target="_blank">
+<a href="http://armviz.io/#/?load=https%3A%2F%2Fraw.githubusercontent.com%2Fflecoqui%2FTestRESTAPIService%2Fmaster%2Fazuredeploy.json" target="_blank">
     <img src="http://armviz.io/visualizebutton.png"/>
 </a>
 
 This template allows you to deploy a Web Application on Azure App Service, several functions on Azure Function, an Azure Storage Account, Azure Search Account, a Speech Service and a LUIS service. Moreover, the applications and functions source code  will be stored on github and automatically deployed on Azure.
 
 
-![](https://raw.githubusercontent.com/flecoqui/TestWebFunctionSpeechLuisApp/master/Docs/1-architecture.png)
+![](https://raw.githubusercontent.com/flecoqui/TestRESTAPIService/master/Docs/1-architecture.png)
 
 
 
@@ -22,9 +22,9 @@ This template allows you to deploy a Web Application on Azure App Service, sever
 
 For instance:
 
-    azure group create TestWebFunctionSpeechLuisApprg eastus2
+    azure group create TestRESTAPIServicerg eastus2
 
-    az group create -n TestWebFunctionSpeechLuisApprg -l eastus2
+    az group create -n TestRESTAPIServicerg -l eastus2
 
 ## DEPLOY THE SERVICES:
 
@@ -34,9 +34,9 @@ For instance:
 
 For instance:
 
-    azure group deployment create TestWebFunctionSpeechLuisApprg TestWebFunctionSpeechLuisAppdep -f azuredeploy.json -e azuredeploy.parameters.json -vv
+    azure group deployment create TestRESTAPIServicerg TestRESTAPIServicedep -f azuredeploy.json -e azuredeploy.parameters.json -vv
 
-    az group deployment create -g TestWebFunctionSpeechLuisApprg -n TestWebFunctionSpeechLuisAppdep --template-file azuredeploy.json --parameter @azuredeploy.parameters.json --verbose -o json
+    az group deployment create -g TestRESTAPIServicerg -n TestRESTAPIServicedep --template-file azuredeploy.json --parameter @azuredeploy.parameters.json --verbose -o json
 
 
 When you deploy the service you can define the following parameters:</p>
@@ -53,7 +53,7 @@ When you deploy the service you can define the following parameters:</p>
 Once deployed, the following services are available in the resource group:
 
 
-![](https://raw.githubusercontent.com/flecoqui/TestWebFunctionSpeechLuisApp/master/Docs/1-deploy.png)
+![](https://raw.githubusercontent.com/flecoqui/TestRESTAPIService/master/Docs/1-deploy.png)
 
 
 ## TEST THE SERVICES:
@@ -79,7 +79,7 @@ For instance :
 
 For instance:
 
-    azure group delete TestWebFunctionSpeechLuisApprg eastus2
+    azure group delete TestRESTAPIServicerg eastus2
 
-    az group delete -n TestWebFunctionSpeechLuisApprg 
+    az group delete -n TestRESTAPIServicerg 
 
