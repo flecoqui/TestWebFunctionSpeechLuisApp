@@ -8,14 +8,11 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Logging;
 
-namespace testweb
+namespace TestWebApp
 {
     public class Program
     {
-        public static double HttpPostCounter;
-        public static double HttpPostTimer;
-        public static DateTime HttpPostStartTime = DateTime.MinValue;
-        public static DateTime HttpPostEndTime;
+
         public static void Main(string[] args)
         {
             CreateWebHostBuilder(args).Build().Run();

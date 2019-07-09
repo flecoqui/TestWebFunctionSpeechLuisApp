@@ -6,7 +6,9 @@
       "type": "httpTrigger",
       "direction": "in",
       "methods": [
-        "post"
+        "get",
+        "post",
+        "delete"
       ]
     },
     {

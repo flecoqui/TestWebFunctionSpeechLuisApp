@@ -5,18 +5,6 @@
     "namePrefix": {
       "value": "testspeech"
     },
-    "storageSku": {
-      "value": "Standard_LRS"
-    },
-    "searchSku": {
-      "value": "basic"
-    },
-    "customSpeechSku": {
-      "value": "S0"
-    },
-    "luisSku": {
-      "value": "S0"
-    },
     "azFunctionAppSku": {
       "value": "F1"
     },
